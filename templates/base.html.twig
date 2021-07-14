@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {# Run `composer require symfony/webpack-encore-bundle`
+       and uncomment the following Encore helpers to start using Symfony UX #}
+    {% block stylesheets %}
+        {#{{ encore_entry_link_tags('app') }}#}
+    {% endblock %}
+
+    {% block javascripts %}
+        {#{{ encore_entry_script_tags('app') }}#}
+    {% endblock %}
+    <style>
+        h1, h3, h4, p {
+            text-align: center;
+        }
+
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        a {
+            text-align: center;
+            display: inline-block;
+            text-decoration: none !important;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        div {
+            text-align: center;
+            margin: 0 auto;
+            width: 50%;
+        }
+
+        button {
+            border: 3px solid black;
+            margin: 0 auto;
+            display: block;
+            text-align:center
+        }
+    </style>
+
+</head>
+<body>
+<h1>Wroclaw Weather Checkpointer</h1>
+<h3>test application for PXLS by Witek</h3>
+
+{% block body %}{% endblock %}
+</body>
+</html>

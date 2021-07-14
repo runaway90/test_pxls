@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit WeatherCheckpoint{% endblock %}
+
+{% block body %}
+    <h1>Edit WeatherCheckpoint</h1>
+
+    {{ include('weather_checkpoint/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('weather_checkpoint_index') }}">back to list</a>
+
+    {{ include('weather_checkpoint/_delete_form.html.twig') }}
+
+{% endblock %}

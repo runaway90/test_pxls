@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}WeatherCheckpoint index{% endblock %}
+
+{% block body %}
+
+    <a href="{{ path('weather_checkpoint_new') }}">Create new</a>
+
+    <h3>List of WeatherCheckpoints</h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Temperature</th>
+                <th>Speed Wind</th>
+                <th>CheckDate</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for weather_checkpoint in weather_checkpoints %}
+            <tr>
+                <td>{{ weather_checkpoint.id }}</td>
+                <td>{{ weather_checkpoint.temperature }}</td>
+                <td>{{ weather_checkpoint.speedWind }}</td>
+                <td>{{ weather_checkpoint.checkDate ? weather_checkpoint.checkDate|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('weather_checkpoint_edit', {'id': weather_checkpoint.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
