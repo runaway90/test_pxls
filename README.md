@@ -11,8 +11,8 @@
                                                         <li class="list-group-item">Clone project from git. Enter in this directory.</li>
                                                         <li class="list-group-item">Check/create database and change info to .env </li>
                                                          <li class="list-group-item">Run command " php bin/console doctrine:schema:create "</li>
-                                                        <li class="list-group-item">Run commands " php bin/console doctrine:fixtures:load ")</li>
-                                                        <li class="list-group-item">Run application "symfony serve" and open browser"</li>
+                                                        <li class="list-group-item">Run commands " php bin/console doctrine:fixtures:load "</li>
+                                                        <li class="list-group-item">Run application "symfony serve" and open browser</li>
                                                         </ul>
                     </p>
                     <p class="lead">Testing photos</p>
